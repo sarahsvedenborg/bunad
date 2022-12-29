@@ -1,0 +1,15 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  color: var(--color-primary);
+  justify-content: center;
+  list-style-type: none;
+  padding: 1em 0;
+  border-bottom: 2px solid var(--color-primary);
+  text-transform: uppercase;
+}
+
+.nav li {
+  margin: 0 2em;
+}

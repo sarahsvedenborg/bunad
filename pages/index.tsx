@@ -17,10 +17,18 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <PageLayout />
-      <main className={styles.main}>
-        <h1>Bunad</h1>
-        {/* <div className={styles.description}>
+      <PageLayout>
+        <main className={styles.main}>
+          <h1>Bunad</h1>
+          <h2>ToDo</h2>
+          <ul>
+            <li>Make style-dictionary work in ui lib</li>
+            <li>Make 2nd frontend and fetch content from sanity</li>
+            <li>Host 2 frontends and ui-lib on vercel</li>
+            <li>Publish ui lib as npm package</li>
+            <li>Use cui npm package in the 2 frontends</li>
+          </ul>
+          {/* <div className={styles.description}>
           <p>
             Get started by editing&nbsp;
             <code className={styles.code}>pages/index.tsx</code>
@@ -122,7 +130,8 @@ export default function Home() {
             </p>
           </a>
         </div> */}
-      </main>
+        </main>
+      </PageLayout>
     </>
   );
 }
