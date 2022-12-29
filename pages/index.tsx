@@ -3,6 +3,8 @@ import Image from "next/image";
 import { PageLayout } from "../components";
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
+import { client } from "../lib/sanity.client";
+import { groq } from "next-sanity";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -123,4 +125,18 @@ export default function Home() {
       </main>
     </>
   );
+}
+
+export async function getStaticProps(context) {
+  const query = groq`*[]`;
+  const data = await client.fetch(query);
+  console.log("data", data);
+  if (!data) {
+    return null;
+  }
+
+  return {
+    // Passed to the page component as props
+    props: { data },
+  };
 }
